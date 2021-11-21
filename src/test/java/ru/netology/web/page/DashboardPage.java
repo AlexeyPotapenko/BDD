@@ -31,7 +31,7 @@ public class DashboardPage {
         return extractBalance(text);
     }
 
-    public TransferPage selectCardToReplenishment(DataHelper.CardNumInfo cardInfo) {
+    public TransferPage selectCardToReplenishment(DataHelper.CardInfo cardInfo) {
         cards.findBy(text(cardInfo.getCardNumber().substring(12, 16))).$("button").click();
         return new TransferPage();
     }

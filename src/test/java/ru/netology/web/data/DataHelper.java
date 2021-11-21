@@ -26,17 +26,17 @@ public class DataHelper {
     }
 
     @Value
-    public static class CardNumInfo {
+    public static class CardInfo {
         String cardNumber;
 
     }
 
-    public static CardNumInfo getFirstCardNum() {
-        return new CardNumInfo("5559000000000001");
+    public static CardInfo getFirstCardNum() {
+        return new CardInfo("5559000000000001");
     }
 
-    public static CardNumInfo getSecondCardNub() {
-        return new CardNumInfo("5559000000000002");
+    public static CardInfo getSecondCardNub() {
+        return new CardInfo("5559000000000002");
     }
 
 }
