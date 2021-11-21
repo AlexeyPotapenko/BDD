@@ -1,13 +1,10 @@
-package ru.netology.web.test;
-
 import org.junit.jupiter.api.Test;
-import ru.netology.web.data.DataHelper;
-import ru.netology.web.page.LoginPage;
+import data.DataHelper;
+import page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
+import static data.DataHelper.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.netology.web.data.DataHelper.getFirstCardNum;
-import static ru.netology.web.data.DataHelper.getSecondCardNub;
 
 class MoneyTransferTest {
 
@@ -16,7 +13,7 @@ class MoneyTransferTest {
         var loginPage = open("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
-        var verificationCode = DataHelper.getVerificationCodeFor(authInfo);
+        var verificationCode = getVerificationCodeFor(authInfo);
         var dashboardPage = verificationPage.validVerify(verificationCode);
         var firstCardInfo = getFirstCardNum();
         var secondCardInfo = getSecondCardNub();
